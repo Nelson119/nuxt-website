@@ -1,4 +1,9 @@
-
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  base: '/nuxt-website/'
+} : {}
+const publicPath = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  publicPath: 'js'
+} : {}
 export default {
   mode: 'universal',
   /*
@@ -50,6 +55,10 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    ...publicPath
+  },
+  router: {
+    ...routerBase
   }
 }

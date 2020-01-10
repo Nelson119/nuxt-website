@@ -1,0 +1,58 @@
+
+$screen-xs-num: 800;
+$screen-xs: #{$screen-xs-num}px;
+$screen-sm-num: 1100;
+$screen-sm: #{$screen-sm-num}px;
+$screen-md-num: 1366;
+$screen-md: #{$screen-md-num}px;
+$screen-lg-num: 1920;
+$screen-lg: #{$screen-lg-num}px;
+@mixin SubItem() {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;	
+}
+
+@mixin SubImgW() {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: auto;	
+}
+@mixin animation ($animation) {
+    -webkit-animation: $animation;
+
+    -moz-animation: $animation;
+
+    -o-animation: $animation;
+
+    animation: $animation;
+}
+@function per($pixels, $context: $browser-xs-viewport){
+    @return percentage($pixels/$context);
+}
+@function em($pixels, $context: $font-size-base-num){
+    @return #{$pixels/$context}em;
+}
+.vertical-middle{
+	// letter-spacing: -1em;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		white-space: nowrap;
+	}
+	&:before{
+		height: 100%;
+		content:'';
+		display: inline-block;
+		vertical-align: middle;
+		// letter-spacing: -1em;
+	}
+	>*{
+		display: inline-block;
+		vertical-align: middle;
+		letter-spacing: 1px;
+		white-space: normal;
+	}
+}

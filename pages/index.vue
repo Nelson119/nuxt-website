@@ -15,7 +15,7 @@
       </p>
       <el-row class="stores">
         <el-collapse v-model="activeNames">
-          <el-col :xs="24" :sm="24" :md="24" v-for="(item,index) in stores" :key="index">
+          <el-col :xs="24" :sm="12" :md="6" v-for="(item,index) in stores" :key="index">
             <!-- <span></span> -->
               <el-collapse-item :title="item.name" :name="index">
                 <div>

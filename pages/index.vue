@@ -9,6 +9,7 @@
         <!-- My beautiful Nuxt.js project --> 
       </h2>
       <p>
+            <locales></locales>
         外送：<i class="active el-icon-shopping-bag-2"></i> 
         先繳訂金：<i class="active el-icon-money"></i>
         停車 ：<i class="active el-icon-guide"></i>
@@ -85,11 +86,12 @@
 <script>
 // import Logo from '~/components/Logo.vue'
 import Store from '~/components/Store.vue'
+import locales from '../components/Locale';
 const axios = require('axios');
 
 export default {
   components: {
-    // Logo,
+    locales,
     Store
   },
   data: () => {

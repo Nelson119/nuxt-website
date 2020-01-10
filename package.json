@@ -5,14 +5,17 @@
   "author": "Nelson",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --hostname 0.0.0.0 --port 3333",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^0.19.1",
+    "element-ui": "^2.4.11",
+    "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
-    "element-ui": "^2.4.11"
+    "sass-loader": "^8.0.0"
   },
   "devDependencies": {}
 }
